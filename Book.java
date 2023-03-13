@@ -7,7 +7,6 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-
 public class Book {
     private String title;
     private String author;
@@ -37,14 +36,14 @@ public class Book {
     }
 
     public static void main(String[] args) {
-        Book[] objectArray = new Book[7];
-        objectArray[0] = new Book();
-        objectArray[1] = new Book("Harry Potter", "Rowling", "Bloomsbury Children`s", 2018, "fantasy", 6);
-        objectArray[2] = getInstance();
-        objectArray[3] = getInstance();
+        Book[] Books = new Book[7];
+        Books[0] = new Book();
+        Books[1] = new Book("Harry Potter", "Rowling", "Bloomsbury Children`s", 2018, "fantasy", 6);
+        Books[2] = getInstance();
+        Books[3] = getInstance();
 
-        for (int i = 0; i < objectArray.length; i++) {
-            System.out.println(objectArray[i]);
+        for (Book book: Books) {
+            System.out.println(book);
         }
     }
 }
